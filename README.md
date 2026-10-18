@@ -31,7 +31,9 @@ python -m http.server 8000
 
 ## Deploy
 
-Every push to `main` deploys to GitHub Pages via `.github/workflows/deploy.yml`.
-One-time setup: in the repo go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**.
+GitHub Pages deploys straight from the `main` branch (Settings → Pages → Deploy from a branch → `main` / root).
+Every push to `main` goes live in about a minute.
+
+After changing `style.css`, `config.js` or `script.js`, bump the `?v=` number on their links in `index.html` so browsers fetch the new version.
 
 The site will be live at `https://ammarkarimi.github.io/anniversary-website/`.
