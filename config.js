@@ -9,12 +9,11 @@ const CONFIG = {
   fromFull: "Rafika Karimi",
   toFull: "Hammad Payawala",
 
-  // The day your story started (YYYY-MM-DD). Used for the "together for" counter.
-  // ⚠️ Replace with your real date!
-  togetherSince: "2023-10-18",
+  // Our shaadi day (YYYY-MM-DD). Used for the "married for" counter.
+  togetherSince: "2025-10-25",
 
   // Which anniversary this is (shown in the hero). e.g. "1st", "2nd", "3rd"
-  anniversaryNumber: "",
+  anniversaryNumber: "1st",
 
   // Optional background music: put an mp3 at assets/music.mp3 and it will
   // show a music button. Leave as-is if you don't want music.
@@ -43,8 +42,9 @@ const CONFIG = {
     { date: "The Beginning",   emoji: "✨", title: "When we first met",     text: "I had no idea that one moment would change my whole life. But my heart knew." },
     { date: "First Date",      emoji: "☕", title: "Butterflies everywhere", text: "I was so nervous, and you made it feel so easy. I never wanted it to end." },
     { date: "The Moment",      emoji: "💘", title: "When I knew",           text: "Somewhere between the laughter and the late-night talks, I fell for you completely." },
-    { date: "Every Day Since", emoji: "🏡", title: "Building our world",    text: "Every adventure, every argument, every hug — all of it made us stronger." },
-    { date: "Today",           emoji: "🎉", title: "Happy Anniversary!",     text: "And this is just the beginning. I can't wait for all our tomorrows." },
+    { date: "25 Oct 2025",     emoji: "💍", title: "Our Shaadi",            text: "The day I became yours and you became mine — officially, forever, no take-backs." },
+    { date: "Year One",        emoji: "🏡", title: "Building our world",    text: "Every adventure, every argument, every hug — all of it made us stronger." },
+    { date: "25 Oct 2026",     emoji: "🎉", title: "Happy 1st Anniversary!", text: "One year down, forever to go. I can't wait for all our tomorrows." },
   ],
 
   // ---------------------------------------------------------------
@@ -73,7 +73,7 @@ const CONFIG = {
   // ---------------------------------------------------------------
   letter:
     "My dearest Hammad,\n\n" +
-    "Happy Anniversary, my love! I made this little corner of the internet just for you, because a card felt way too small for everything I feel.\n\n" +
+    "Happy 1st Anniversary, my love! One whole year of being your wife, and I made this little corner of the internet just for you, because a card felt way too small for everything I feel.\n\n" +
     "Thank you for every laugh, every late-night conversation, every time you held my hand without me asking. Thank you for loving me on my good days and even more on my messy ones.\n\n" +
     "You are my home, my peace, my favourite notification, and my forever person. I fall in love with you a little more every single day — and I promise to keep choosing you, again and again.\n\n" +
     "Here's to us, to all the memories we've made, and to the million more we're going to make.\n\n" +
