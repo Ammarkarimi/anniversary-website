@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Anniversary, Hammad 💖</title>
+  <meta name="description" content="A little corner of the internet made with love, from Rafika to Hammad." />
+  <meta property="og:title" content="Happy Anniversary, Hammad 💖" />
+  <meta property="og:description" content="A little surprise from Rafika, made with all her love." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="locked">
+
+  <!-- floating hearts background -->
+  <div id="heart-bg" aria-hidden="true"></div>
+
+  <!-- ============ ENVELOPE INTRO ============ -->
+  <section id="intro" class="intro">
+    <p class="intro-hint">psst... <span class="to-name">Hammad</span>, you've got mail 💌</p>
+    <button class="envelope" id="envelope" aria-label="Open the envelope">
+      <span class="env-back"></span>
+      <span class="env-letter">
+        <span class="env-letter-text">For my<br /><b class="to-name">Hammad</b></span>
+      </span>
+      <span class="env-front"></span>
+      <span class="env-flap"></span>
+      <span class="env-seal">💗</span>
+    </button>
+    <p class="intro-tap">tap the envelope</p>
+  </section>
+
+  <!-- ============ MAIN SITE ============ -->
+  <main id="site" hidden>
+
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#story">Our Story</a>
+      <a href="#gallery">Memories</a>
+      <a href="#reasons">Reasons</a>
+      <a href="#letter">Letter</a>
+      <a href="#question">❓</a>
+    </nav>
+
+    <button id="music-btn" class="music-btn" hidden aria-label="Toggle music">🎵</button>
+    <audio id="music" loop preload="none"></audio>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="sticker s1">🧸</div>
+      <div class="sticker s2">🌸</div>
+      <div class="sticker s3">🍓</div>
+      <div class="sticker s4">🎀</div>
+      <div class="sticker s5">🦋</div>
+      <div class="sticker s6">💫</div>
+
+      <p class="hero-kicker">it's our <span id="anniv-num"></span>anniversary!</p>
+      <h1 class="hero-title">
+        <span class="wiggle">Happy</span>
+        <span class="wiggle d2">Anniversary,</span>
+        <span class="hero-name to-name">Hammad</span>
+      </h1>
+      <p class="hero-sub">from your one and only, <b class="from-name">Rafika</b> 💕</p>
+
+      <div class="couple">
+        <div class="bubble"><span class="initial" id="init-to">H</span><small class="to-full">Hammad Payawala</small></div>
+        <div class="beating-heart">❤️</div>
+        <div class="bubble"><span class="initial" id="init-from">R</span><small class="from-full">Rafika Karimi</small></div>
+      </div>
+
+      <a href="#counter" class="btn btn-big">Let's go! 🚀</a>
+      <div class="scroll-cue">scroll for cuteness ↓</div>
+    </section>
+
+    <!-- COUNTER -->
+    <section id="counter" class="section counter-section">
+      <h2 class="section-title">We've been <span class="squiggle">together</span> for</h2>
+      <div class="counter">
+        <div class="count-box"><span id="c-years">0</span><small>years</small></div>
+        <div class="count-box"><span id="c-days">0</span><small>days</small></div>
+        <div class="count-box"><span id="c-hours">0</span><small>hours</small></div>
+        <div class="count-box"><span id="c-mins">0</span><small>minutes</small></div>
+        <div class="count-box"><span id="c-secs">0</span><small>seconds</small></div>
+      </div>
+      <p class="counter-note">...and I'd choose you for every single one of them again 🥹</p>
+      <div class="fun-stats">
+        <div class="stat"><b id="s-hugs">0</b><span>hugs (approx.) 🤗</span></div>
+        <div class="stat"><b id="s-kisses">0</b><span>kisses (lost count) 😘</span></div>
+        <div class="stat"><b>∞</b><span>times you made me smile 😊</span></div>
+        <div class="stat"><b id="s-fights">0</b><span>times I was right 💅</span></div>
+      </div>
+    </section>
+
+    <!-- STORY TIMELINE -->
+    <section id="story" class="section">
+      <h2 class="section-title">Our <span class="squiggle">Love Story</span> 📖</h2>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section gallery-section">
+      <h2 class="section-title">Our <span class="squiggle">Memories</span> 📸</h2>
+      <p class="section-sub">tap a polaroid to make it big</p>
+      <div class="gallery" id="gallery-grid"></div>
+    </section>
+
+    <!-- REASONS -->
+    <section id="reasons" class="section reasons-section">
+      <h2 class="section-title">Reasons I <span class="squiggle">Love</span> You</h2>
+      <p class="section-sub">a very scientific machine 🧪 (it never runs out)</p>
+      <div class="reason-machine">
+        <div class="reason-card" id="reason-card">
+          <span class="reason-num" id="reason-num">#1</span>
+          <p id="reason-text">Press the button, my love 👇</p>
+        </div>
+        <button class="btn" id="reason-btn">Give me a reason 💘</button>
+      </div>
+
+      <h3 class="mini-title">Open when... 💌</h3>
+      <div class="open-when" id="open-when">
+        <div class="flip"><div class="flip-inner"><div class="flip-front">Open when you miss me 🥺</div><div class="flip-back">Close your eyes. Feel that? That's me hugging you from wherever I am. I'm always with you. 💞</div></div></div>
+        <div class="flip"><div class="flip-inner"><div class="flip-front">Open when you're sad 🌧️</div><div class="flip-back">You are SO loved. Call me right now, I'll make you laugh till your stomach hurts. 🌈</div></div></div>
+        <div class="flip"><div class="flip-inner"><div class="flip-front">Open when you're hungry 🍔</div><div class="flip-back">Order your fav food, on me. (Okay, maybe on you. But I'll share! 😋)</div></div></div>
+        <div class="flip"><div class="flip-inner"><div class="flip-front">Open when you need a smile 😊</div><div class="flip-back">Remember: you have the funniest, cutest person in the whole world. Lucky you 😎💅</div></div></div>
+      </div>
+    </section>
+
+    <!-- GAME -->
+    <section id="game" class="section game-section">
+      <h2 class="section-title">Catch My <span class="squiggle">Love</span> 💕</h2>
+      <p class="section-sub">catch 20 hearts to unlock a secret 🔓 (avoid the 💔!)</p>
+      <div class="game-board" id="game-board">
+        <div class="game-hud"><span>❤️ <b id="score">0</b>/20</span><span>⏱️ <b id="timer">30</b>s</span></div>
+        <button class="btn" id="game-start">Start ▶</button>
+        <div class="game-msg" id="game-msg" hidden></div>
+      </div>
+    </section>
+
+    <!-- LETTER -->
+    <section id="letter" class="section letter-section">
+      <h2 class="section-title">A Letter <span class="squiggle">For You</span> ✍️</h2>
+      <div class="paper">
+        <div class="tape"></div>
+        <p class="letter-text" id="letter-text"></p>
+        <button class="btn btn-ghost" id="letter-btn">Read my letter 💌</button>
+      </div>
+    </section>
+
+    <!-- THE QUESTION -->
+    <section id="question" class="section question-section">
+      <div class="question-card" id="question-card">
+        <div class="question-gif">🐻💌🐻</div>
+        <h2 class="question-title"><span class="to-name">Hammad</span>, will you be mine forever?</h2>
+        <div class="question-btns">
+          <button class="btn btn-yes" id="yes-btn">YES! 💖</button>
+          <button class="btn btn-no" id="no-btn">No 🙄</button>
+        </div>
+      </div>
+      <div class="celebration" id="celebration" hidden>
+        <div class="celebrate-emoji">🥳💍🥰</div>
+        <h2 class="celebrate-title">I knew it!! I love you SO much!</h2>
+        <p class="celebrate-sub">Happy Anniversary, my forever person. Here's to us. 💞</p>
+        <p class="signature">— <span class="from-name">Rafika</span></p>
+        <button class="btn" id="again-btn">More confetti! 🎊</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      made with 💖, way too many hearts, and zero chill by <b class="from-full">Rafika Karimi</b><br />
+      for <b class="to-full">Hammad Payawala</b> · <span id="year"></span>
+    </footer>
+  </main>
+
+  <!-- lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" id="lb-close" aria-label="Close">✕</button>
+    <button class="lb-nav lb-prev" id="lb-prev" aria-label="Previous">‹</button>
+    <figure class="lb-figure">
+      <div class="lb-media" id="lb-media"></div>
+      <figcaption id="lb-caption"></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" id="lb-next" aria-label="Next">›</button>
+  </div>
+
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
