@@ -15,35 +15,58 @@ const CONFIG = {
   // Which anniversary this is (shown in the hero). e.g. "1st", "2nd", "3rd"
   anniversaryNumber: "1st",
 
+  // ---------------------------------------------------------------
+  //  🔒 THE LOCK — he has to answer this before the website opens
+  //  (month is 1-12). It's a cute gate, not real security: anyone
+  //  who reads this file can see the answer.
+  // ---------------------------------------------------------------
+  lock: {
+    question: "When did we meet for the first time?",
+    answer: { day: 9, month: 12, year: 2023 },
+    yearsFrom: 2015,
+    yearsTo: 2026,
+  },
+
   // Optional background music: put an mp3 at assets/music.mp3 and it will
   // show a music button. Leave as-is if you don't want music.
   music: "assets/music.mp3",
 
+  // The photo shown big on the home screen
+  heroPhoto: "photos/01.jpg",
+
   // ---------------------------------------------------------------
-  //  📸 PHOTOS — drop your pictures in the /photos folder and list
-  //  them here. Until a photo exists, a cute placeholder is shown.
+  //  📸 PHOTOS — in the /photos folder, shown in this order.
+  //  If a file is missing, a cute placeholder is shown instead.
   // ---------------------------------------------------------------
   photos: [
-    { src: "photos/1.jpg",  caption: "The day it all began 💫" },
-    { src: "photos/2.jpg",  caption: "Our first date 🍝" },
-    { src: "photos/3.jpg",  caption: "That smile tho 😍" },
-    { src: "photos/4.jpg",  caption: "Adventure buddies 🌍" },
-    { src: "photos/5.jpg",  caption: "Silly us 🤪" },
-    { src: "photos/6.jpg",  caption: "My favourite person 💕" },
-    { src: "photos/7.jpg",  caption: "Food dates forever 🍕" },
-    { src: "photos/8.jpg",  caption: "Sunsets with you 🌅" },
-    { src: "photos/9.jpg",  caption: "Us, being cute 🥰" },
+    { src: "photos/01.jpg", caption: "Qubool hai, forever 💍" },
+    { src: "photos/02.jpg", caption: "Mr & Mrs, officially 💚" },
+    { src: "photos/03.jpg", caption: "Suited up, all for me 🤵💗" },
+    { src: "photos/04.jpg", caption: "Getting ready, together 🌸" },
+    { src: "photos/05.jpg", caption: "Mehendi hands & boarding passes ✈️" },
+    { src: "photos/06.jpg", caption: "Best seat = next to you 💺" },
+    { src: "photos/07.jpg", caption: "On top of the world with you 🏔️" },
+    { src: "photos/08.jpg", caption: "Sunglasses & sunshine 😎" },
+    { src: "photos/09.jpg", caption: "Snow, sun & my person ❄️" },
+    { src: "photos/10.jpg", caption: "Cuddles to beat the cold 🥶🤗" },
+    { src: "photos/11.jpg", caption: "Lost in the meadows with you 🌲" },
+    { src: "photos/12.jpg", caption: "Pink flowers, pinker cheeks 🌺" },
+    { src: "photos/13.jpg", caption: "Matching watches, matching hearts ⌚" },
+    { src: "photos/14.jpg", caption: "Night out, heart full 🌙" },
+    { src: "photos/15.jpg", caption: "Candlelight & you 🕯️" },
+    { src: "photos/16.jpg", caption: "Balloons, cake & us 🎈" },
+    { src: "photos/17.jpg", caption: "Celebrating us, always 🥳" },
   ],
 
   // ---------------------------------------------------------------
-  //  📖 OUR STORY — timeline moments
+  //  📖 OUR STORY — timeline moments (photo is optional)
   // ---------------------------------------------------------------
   timeline: [
-    { date: "The Beginning",   emoji: "✨", title: "When we first met",     text: "I had no idea that one moment would change my whole life. But my heart knew." },
-    { date: "First Date",      emoji: "☕", title: "Butterflies everywhere", text: "I was so nervous, and you made it feel so easy. I never wanted it to end." },
-    { date: "The Moment",      emoji: "💘", title: "When I knew",           text: "Somewhere between the laughter and the late-night talks, I fell for you completely." },
-    { date: "25 Oct 2025",     emoji: "💍", title: "Our Shaadi",            text: "The day I became yours and you became mine — officially, forever, no take-backs." },
-    { date: "Year One",        emoji: "🏡", title: "Building our world",    text: "Every adventure, every argument, every hug — all of it made us stronger." },
+    { date: "9 Dec 2023",      emoji: "✨", title: "The day we first met",   text: "An ordinary day that turned out to be the most important day of my life. I had no idea... but my heart did." },
+    { date: "Then...",         emoji: "💘", title: "When I knew",            text: "Somewhere between the laughter and the late-night talks, I fell for you completely." },
+    { date: "25 Oct 2025",     emoji: "💍", title: "Our Shaadi",             text: "Qubool hai. The day I became yours and you became mine — officially, forever, no take-backs.", photo: "photos/01.jpg" },
+    { date: "Our First Trip",  emoji: "🏔️", title: "Up in the mountains",    text: "Snow, sunshine, matching sunglasses, and you holding my hand the whole way up.", photo: "photos/10.jpg" },
+    { date: "Year One",        emoji: "🏡", title: "Building our world",     text: "Candlelight dinners, silly selfies, matching watches — every little moment made us stronger.", photo: "photos/15.jpg" },
     { date: "25 Oct 2026",     emoji: "🎉", title: "Happy 1st Anniversary!", text: "One year down, forever to go. I can't wait for all our tomorrows." },
   ],
 

@@ -12,10 +12,71 @@
   $$(".from-name").forEach((el) => (el.textContent = CONFIG.from));
   $$(".to-full").forEach((el) => (el.textContent = CONFIG.toFull));
   $$(".from-full").forEach((el) => (el.textContent = CONFIG.fromFull));
-  $("#init-to").textContent = CONFIG.to.charAt(0);
-  $("#init-from").textContent = CONFIG.from.charAt(0);
   $("#anniv-num").textContent = CONFIG.anniversaryNumber ? CONFIG.anniversaryNumber + " " : "";
   $("#year").textContent = new Date().getFullYear();
+
+  const heroImg = $("#hero-img");
+  heroImg.onerror = () => heroImg.closest(".hero-photo").classList.add("no-photo");
+  heroImg.src = CONFIG.heroPhoto;
+
+  /* ---------------- lock screen ---------------- */
+  const lockEl = $("#lock");
+  const lockForm = $("#lock-form");
+  const lockMsg = $("#lock-msg");
+  const padlock = $("#padlock");
+  const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const fillSelect = (sel, placeholder, options) => {
+    $(sel).innerHTML =
+      `<option value="" disabled selected>${placeholder}</option>` +
+      options.map(([value, label]) => `<option value="${value}">${label}</option>`).join("");
+  };
+  const range = (a, b) => Array.from({ length: Math.abs(b - a) + 1 }, (_, i) => (a < b ? a + i : a - i));
+  $("#lock-question").textContent = CONFIG.lock.question;
+  fillSelect("#lock-day", "Day", range(1, 31).map((d) => [d, d]));
+  fillSelect("#lock-month", "Month", MONTHS.map((m, i) => [i + 1, m]));
+  fillSelect("#lock-year", "Year", range(CONFIG.lock.yearsTo, CONFIG.lock.yearsFrom).map((y) => [y, y]));
+
+  const WRONG = [
+    "Hmm... are you sure? 🤨",
+    "Wrong! Someone's in trouble 😤",
+    "How could you forget?! 😭",
+    "Nope! Think harder, mister 🧠",
+    "Still wrong 🙄 I'm telling your mom",
+  ];
+  let attempts = 0;
+  lockForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const day = +$("#lock-day").value;
+    const month = +$("#lock-month").value;
+    const year = +$("#lock-year").value;
+    if (!day || !month || !year) {
+      lockMsg.textContent = "Pick the day, month AND year 🥺";
+      return;
+    }
+    const a = CONFIG.lock.answer;
+    if (day === a.day && month === a.month && year === a.year) {
+      unlock();
+      return;
+    }
+    attempts++;
+    let msg = WRONG[(attempts - 1) % WRONG.length];
+    if (attempts >= 5) msg += ` Hint: ${MONTHS[a.month - 1]} ${a.year}... now just the day 😏`;
+    else if (attempts >= 3) msg += ` Hint: it was ${MONTHS[a.month - 1]} ❄️`;
+    lockMsg.textContent = msg;
+    padlock.classList.remove("shake");
+    lockForm.classList.remove("shake");
+    void padlock.offsetWidth;
+    padlock.classList.add("shake");
+    lockForm.classList.add("shake");
+  });
+  function unlock() {
+    padlock.classList.add("open");
+    lockMsg.textContent = "You remembered!! 🥹💖";
+    lockForm.querySelector("button").disabled = true;
+    confetti(120, 0.45);
+    setTimeout(() => lockEl.classList.add("gone"), 1400);
+    setTimeout(() => lockEl.remove(), 2400);
+  }
 
   /* ---------------- floating hearts background ---------------- */
   const heartBg = $("#heart-bg");
@@ -76,7 +137,7 @@
 
   function confetti(amount = 160, originY = 0.35) {
     if (reducedMotion) return;
-    const colors = ["#ff5fa2", "#e6337f", "#ffd1e3", "#ffb38a", "#c9a7ff", "#ffffff", "#ffe066"];
+    const colors = ["#d94f7c", "#9b1d48", "#f6d5dc", "#d6a547", "#f3dfae", "#ffffff", "#1f6f5c"];
     const w = window.innerWidth;
     const h = window.innerHeight;
     for (let i = 0; i < amount; i++) {
@@ -230,6 +291,7 @@
           <span class="tl-date">${t.date}</span>
           <h3>${t.title}</h3>
           <p>${t.text}</p>
+          ${t.photo ? `<img class="tl-photo" src="${t.photo}" alt="${t.title}" loading="lazy" onerror="this.remove()">` : ""}
         </div>
       </div>`
     )

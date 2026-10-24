@@ -1,9 +1,10 @@
-# 📸 Photos go here
+# 📸 Photos
 
-Drop your pictures in this folder named `1.jpg`, `2.jpg`, … `9.jpg`.
-They show up automatically in the "Our Memories" gallery.
+The gallery shows the photos listed in `config.js` (`photos: [...]`), in that order,
+with the captions written there. They're numbered `01.jpg` … `17.jpg` in story order:
+shaadi → first trip → year one.
 
-- Want different names, more photos, or different captions? Edit the `photos` list in `config.js`.
-- Square-ish photos look best (they're cropped to a square polaroid; the full photo shows when tapped).
+- **Add a photo:** drop it here (e.g. `18.jpg`) and add a line to `photos` in `config.js`.
+- **Change the big photo on the home screen:** set `heroPhoto` in `config.js`.
 - Keep each photo under ~1 MB so the site loads fast on a phone.
-- Until a photo exists, a cute placeholder is shown in its spot.
+- If a listed file is missing, a cute placeholder shows in its spot.

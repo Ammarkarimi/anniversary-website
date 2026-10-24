@@ -11,12 +11,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
 </head>
 <body class="locked">
 
   <!-- floating hearts background -->
   <div id="heart-bg" aria-hidden="true"></div>
+
+  <!-- ============ LOCK SCREEN ============ -->
+  <section id="lock" class="lock">
+    <form class="lock-card" id="lock-form" autocomplete="off">
+      <div class="padlock" id="padlock" aria-hidden="true">
+        <span class="shackle"></span>
+        <span class="lock-body"><span class="keyhole"></span></span>
+      </div>
+      <p class="lock-kicker">top secret · for <span class="to-name">Hammad</span> only</p>
+      <h1 class="lock-question" id="lock-question">When did we meet for the first time?</h1>
+      <div class="lock-fields">
+        <label><span>Day</span><select id="lock-day"></select></label>
+        <label><span>Month</span><select id="lock-month"></select></label>
+        <label><span>Year</span><select id="lock-year"></select></label>
+      </div>
+      <button class="btn btn-big" type="submit">Unlock 🔑</button>
+      <p class="lock-msg" id="lock-msg" role="status" aria-live="polite"></p>
+    </form>
+  </section>
 
   <!-- ============ ENVELOPE INTRO ============ -->
   <section id="intro" class="intro">
@@ -66,9 +85,11 @@
       <p class="hero-sub">from your one and only, <b class="from-name">Rafika</b> 💕</p>
 
       <div class="couple">
-        <div class="bubble"><span class="initial" id="init-to">H</span><small class="to-full">Hammad Payawala</small></div>
-        <div class="beating-heart">❤️</div>
-        <div class="bubble"><span class="initial" id="init-from">R</span><small class="from-full">Rafika Karimi</small></div>
+        <figure class="hero-photo">
+          <img id="hero-img" alt="Hammad and Rafika on their shaadi day" />
+          <span class="beating-heart">❤️</span>
+        </figure>
+        <p class="couple-names"><span class="to-full">Hammad Payawala</span> <span class="amp">&amp;</span> <span class="from-full">Rafika Karimi</span></p>
       </div>
 
       <a href="#counter" class="btn btn-big">Let's go! 🚀</a>
@@ -187,7 +208,7 @@
 
   <canvas id="confetti" aria-hidden="true"></canvas>
 
-  <script src="config.js?v=3"></script>
-  <script src="script.js?v=3"></script>
+  <script src="config.js?v=4"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
