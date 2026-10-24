@@ -54,8 +54,6 @@ const CONFIG = {
     { src: "photos/13.jpg", caption: "Matching watches, matching hearts ⌚" },
     { src: "photos/14.jpg", caption: "Night out, heart full 🌙" },
     { src: "photos/15.jpg", caption: "Candlelight & you 🕯️" },
-    { src: "photos/16.jpg", caption: "Balloons, cake & us 🎈" },
-    { src: "photos/17.jpg", caption: "Celebrating us, always 🥳" },
   ],
 
   // ---------------------------------------------------------------
